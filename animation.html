@@ -7,6 +7,14 @@
   <body>
     <svg width="100%" height="611">
 
+      <text x="506" y="75" font-family="myFirstFont" font-size="50" fill="#E38C2D">The Lidless Eye</text>
+      <text x="50" y="591 " font-family="myFirstFont" font-size="11" fill="#E38C2D">Three Rings for the Elven-kings under the sky,
+      Seven for the Dwarf-lords in their halls of stone,
+      Nine for Mortal Men doomed to die,
+      One for the Dark Lord on his dark throne.
+      One Ring to rule them all. One Ring to find them,
+      One Ring to bring them all and in the darkness bind them.</text>
+
       <ellipse cx="676" cy="301" rx="400" ry="120" fill="#FF4500"/>
 
       <circle cx="676" cy="301" r="110" fill="#FFA500"/>
@@ -14,13 +22,15 @@
       <circle cx="676" cy="301" r="100" fill="#AA0000"/>
 
       <ellipse cx="676" cy="301" rx="35" ry="73" fill="#FF8C00">
-        <animate attributeName="cx" from="676" to="646" dur="5s" id="test" "test2.end"/>
+        <animate attributeName="cx" from="676" to="646" dur="5s" id="test" begin="test3.begin"/>
         <animate attributeName="cx" from="646" to="706" dur="5s" id="test2" begin="test.end"/>
+        <animate attributeName="cx" from="706" to="676" dur="5s" id="test5" begin="test2.end"/>
       </ellipse>
 
       <ellipse cx="676" cy="301" rx="25" ry="70">
-        <animate attributeName="cx" from="676" to="641" dur="5s" id="test3" "test4.end"/>
+        <animate attributeName="cx" from="676" to="641" dur="5s" id="test3" begin="click"/>
         <animate attributeName="cx" from="641" to="711" dur="5s" id="test4" begin="test3.end"/>
+        <animate attributeName="cx" from="711" to="676" dur="5s" id="test6" begin="test4.end"/>
       </ellipse>
 
     </svg>
