@@ -27,17 +27,21 @@
       <circle cx="676" cy="301" r="100" fill="#AA0000" opacity="1"/>
 
       <ellipse cx="676" cy="301" rx="35" ry="73" fill="#FF8C00" opacity="1">
-        <animate attributeName="cx" from="676" to="646" dur="5s" id="test" begin="test3.begin; click"/>
-        <animate attributeName="cx" from="646" to="706" dur="5s" id="test2" begin="test.end"/>
-        <animate attributeName="cx" from="706" to="676" dur="5s" id="test5" begin="test2.end"/>
+        <animate attributeName="cx" from="676" to="646" dur="5s" id="test" begin="test4.begin; click"/>
+        <animate attributeName="cx" from="646" to="706" dur="5s" id="test2" fill="freeze" begin="test.end+3s"/>
+        <animate attributeName="cx" from="706" to="676" dur="5s" id="test3" fill="freeze" begin="ringfade.end+3s"/>
       </ellipse>
 
       <ellipse cx="676" cy="301" rx="25" ry="70">
-        <animate attributeName="cx" from="676" to="641" dur="5s" id="test3" begin="click; test.begin"/>
-        <animate attributeName="cx" from="641" to="711" dur="5s" id="test4" begin="test3.end"/>
-        <animate attributeName="cx" from="711" to="676" dur="5s" id="test6" begin="test4.end"/>
+        <animate attributeName="cx" from="676" to="641" dur="5s" id="test4" begin="click; test.begin"/>
+        <animate attributeName="cx" from="641" to="711" dur="5s" id="test5" fill="freeze" begin="test4.end+3s"/>
+        <animate attributeName="cx" from="711" to="676" dur="5s" id="test6" fill="freeze" begin="ringfade.end+3s"/>
       </ellipse>
-
+      <circle cx="1234" cy="540" r="30" fill="#FFD700" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="5s" id="ringfadein" begin="test2.end"/>
+          <animate attributeName="opacity" from="1" to="0" dur="5s" id="ringfade" begin="ringfadein.end+7s"/>
+      </circle>
+      <circle cx="1234" cy="540" r="25" fill="#444444"/>
     </svg>
   </body>
 </html>
