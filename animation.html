@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1> The Lidless Eye </h1>
     <svg width="100%" height="611">
       <defs>
         <radialGradient id="Eye">
@@ -12,14 +13,6 @@
           <stop offset="100%" stop-color="#FFA802"/>
         </radialGradient>
       </defs>
-      <text x="506" y="75" font-family="myFirstFont" font-size="50" fill="#E38C2D">The Lidless Eye</text>
-      <text x="50" y="591 " font-family="myFirstFont" font-size="11" fill="#E38C2D">Three Rings for the Elven-kings under the sky,
-      Seven for the Dwarf-lords in their halls of stone,
-      Nine for Mortal Men doomed to die,
-      One for the Dark Lord on his dark throne.
-      One Ring to rule them all. One Ring to find them,
-      One Ring to bring them all and in the darkness bind them.</text>
-
       <ellipse cx="676" cy="301" rx="400" ry="120" "#FF4500" fill="url(#Eye)" opacity="0.76"/>
 
       <circle cx="676" cy="301" r="110" fill="#FFA500" opacity="0.76"/>
@@ -28,20 +21,44 @@
 
       <ellipse cx="676" cy="301" rx="35" ry="73" fill="#FF8C00" opacity="1">
         <animate attributeName="cx" from="676" to="646" dur="5s" id="test" begin="test4.begin; click"/>
-        <animate attributeName="cx" from="646" to="706" dur="5s" id="test2" fill="freeze" begin="test.end+3s"/>
-        <animate attributeName="cx" from="706" to="676" dur="5s" id="test3" fill="freeze" begin="ringfade.end+3s"/>
+        <animate attributeName="cx" from="646" to="706" dur="5s" id="test2" fill="freeze" begin="test.end"/>
+        <animate attributeName="cx" from="706" to="676" dur="5s" id="test3" fill="freeze" begin="ringfade.end+1s"/>
       </ellipse>
 
       <ellipse cx="676" cy="301" rx="25" ry="70">
         <animate attributeName="cx" from="676" to="641" dur="5s" id="test4" begin="click; test.begin"/>
-        <animate attributeName="cx" from="641" to="711" dur="5s" id="test5" fill="freeze" begin="test4.end+3s"/>
-        <animate attributeName="cx" from="711" to="676" dur="5s" id="test6" fill="freeze" begin="ringfade.end+3s"/>
+        <animate attributeName="cx" from="641" to="711" dur="5s" id="test5" fill="freeze" begin="test4.end"/>
+        <animate attributeName="cx" from="711" to="676" dur="5s" id="test6" fill="freeze" begin="ringfade.end+1s"/>
       </ellipse>
       <circle cx="1234" cy="540" r="30" fill="#FFD700" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="5s" id="ringfadein" begin="test2.end"/>
-          <animate attributeName="opacity" from="1" to="0" dur="5s" id="ringfade" begin="ringfadein.end+7s"/>
+        <animate attributeName="opacity" from="1" to="0" dur="5s" id="ringfade" begin="ringfadein.end"/>
       </circle>
+
       <circle cx="1234" cy="540" r="25" fill="#444444"/>
+
+      <polygon points="265 521 225 176 185 521"/>
+
+      <polygon points="1087 521 1127 176 1167 521"/>
+
+      <rect x="185" y="520" width="982" height="250"/>
+
+      <ellipse cx="676" cy="519" rx="411" ry="60" "#FF4500" fill="#444444"/>
+
+      <polyline points="240 301 245 291 255 301 265 291 270 301 276 301" stroke="#AA0000" stroke-width="3" fill="#444444">
+        <animate attributeName="points" from="240 301 245 291 255 301 265 291 270 301 276 301" to="240 291 245 301 255 291 265 301 270 291 276 301" dur="1s" id="lighting1" fill="freeze" begin="3s; lighting2.end+1s">
+        <animate attributeName="points" from="240 291 245 301 255 291 265 301 270 291 276 301" to="240 301 245 291 255 301 265 291 270 301 276 301" dur="1s" id="lighting2" fill="freeze" begin="lighting1.end+1s">
+      </polyline>
+      <polyline points="240 301 245 291 255 301 265 291 270 301 276 301" stroke="#AA0000" stroke-width="3" fill="#444444">
+        <animate attributeName="points" from="1112 301 1107 291 1097 301 1087 291 1077 301 1076 301" to="1112 291 1107 301 1097 291 1087 301 1077 291 1076 301" dur="1s" id="lighting3" fill="freeze" begin="3s; lighting4.end+1s"/>
+        <animate attributeName="points" from="1112 291 1107 301 1097 291 1087 301 1077 291 1076 301" to="1112 301 1107 291 1097 301 1087 291 1077 301 1076 301" dur="1s" id="lighting4" fill="freeze" begin="lighting3.end+1s"/>
+      </polyline>
     </svg>
+    <p font-family="myFirstFont" font-size="11" fill="#E38C2D">Three Rings for the Elven-kings under the sky,
+    Seven for the Dwarf-lords in their halls of stone,
+    Nine for Mortal Men doomed to die,
+    One for the Dark Lord on his dark throne.
+    One Ring to rule them all. One Ring to find them,
+    One Ring to bring them all and in the darkness bind them.</p>
   </body>
 </html>
